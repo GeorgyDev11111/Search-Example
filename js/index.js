@@ -40,7 +40,7 @@ function handlerInput() {
   // обновляем стейт
   if(!data.length) {
     printData(localData)
-    // ui - если не находи то, бортер красный :)
+    // ui - если не находи то, бордер красный :)
     $("#search").style = "border: 2px solid red"
   }else {
     $("#search").style = ""
