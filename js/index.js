@@ -1,4 +1,4 @@
-import $ from "./jGosha.js"
+import $ from "./jQueryLite.js"
 import getData from "./getData.js"
 import printData from "./printData.js"
 
@@ -21,7 +21,7 @@ async function handlerInput(e) {
   // перед каждым запуском отчищаем поле для рендера
   $("#root").innerHTML = ""
 
-  // логика фильтрации  
+  // логика фильтрации
   // вшиваем в каждый объект итератор
   const convert = localData.map(el => {
     el[Symbol.iterator] = function* () {
@@ -33,7 +33,7 @@ async function handlerInput(e) {
   })
   // теперь объект можно итерировать, это позволяет слепить все значения любых ключей в одну строку для поиска
   // не важно какой json прилетит, любые ключи будут найдены ( можно конечно по другому сделать, но я захотел так )
-  let searchResult = convert.filter((el) => ( 
+  let searchResult = convert.filter((el) => (
     [...el]
     .join(" ")
       .toLowerCase()

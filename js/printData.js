@@ -1,4 +1,4 @@
-import $,{ $new } from "./jGosha.js"
+import $,{ $new } from "./jQueryLite.js"
 
 export default function (data) {
   for(const obj of data) {
